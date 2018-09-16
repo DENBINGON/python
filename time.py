@@ -17,4 +17,8 @@ def time():
             os.system("clear")
         else:
             os.system("cls")
-time()
+check = input("Show time ?\n")
+if check == "":
+    print("stop")
+else:
+    time()
