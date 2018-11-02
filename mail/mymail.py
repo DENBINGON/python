@@ -19,7 +19,6 @@ mail.close()
 Dat = [line.rstrip() for line in Dat]
 MailList = [line.rstrip() for line in MailList]
 print("Start")
-
 smtpObj = smtplib.SMTP(Dat[2],Dat[4])
 smtpObj.starttls()
 smtpObj.login(Dat[8],Dat[10])
@@ -33,5 +32,4 @@ else:
     for val in range(Val):
         smtpObj.sendmail(Dat[8],Adres,"AHAHAAAAHAAHAAHAHAHAAH")
 smtpObj.quit()
-
 print('The END')
