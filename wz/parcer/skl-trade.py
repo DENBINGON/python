@@ -1,9 +1,14 @@
 ﻿import requests
 import xlsxwriter
 from bs4 import BeautifulSoup
-key = open('data/key', 'r')
-prime = key.readline()
+prime = 1
+try:
+    key = open('data/key', 'r')
+    prime = key.readline()
+except:
+    print("KEY IS NOT FOUND")
 if prime == "!<--!http://skl-trade.ru/http://skl-trade.ru/http://skl-trade.ru/!-->!":
+    print("Ключ найден")
     print('Запускаю библиотеки...')
     f = open("data/settings.txt", "r")
     url_M = f.readline()
@@ -60,5 +65,5 @@ if prime == "!<--!http://skl-trade.ru/http://skl-trade.ru/http://skl-trade.ru/!-
     save.close()
     print("Запись в XLSX файл завершена. Просмотреть данные можно в каталоге data -> Save Information.xlsx")
 else:
-    print('Ключ не найдет')
+    print('Ключ не найден')
 exit = input('Теперь можете закрыть данное окно!')

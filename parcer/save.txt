@@ -1,1 +1,0 @@
-{'title': 'Aschenbachs Apotheke'}{'title': 'Engel Apotheke'}{'title': 'Atlantis-Apotheke, Inh. Karsten Raddei e.k.'}{'title': 'Hafen-Apotheke Heimtraud Schmale e.K.'}{'title': 'Albrecht-Apotheke, Heike Borchardt e.K.'}{'title': 'Alexandrinen-Apotheke, Inhaber M. Heineke e. K.'}{'title': 'Anker-Apotheke'}
