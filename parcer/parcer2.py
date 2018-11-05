@@ -1,4 +1,4 @@
-import tkinter as tk
+﻿import tkinter as tk
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
 URL1 = "https://www.gelbeseiten.de/apotheken/berlin"
@@ -33,7 +33,7 @@ if test == 1:
                 NAME = all_div_link.find("h1", class_="mod-TeilnehmerKopf__name").text
                 ADDRES_D = all_div_link.find("div", class_="mod mod-Kontaktdaten")
                 for i in range(2):
-                    ADDRES = ADDRES_D.find("p").text    #может потребоваться .find_all
+                    ADDRES = ADDRES_D.find("p").text
                 PHONE = all_div_link.find("a", class_="nolink-black")
                 EMAIL_D = all_div_link.find("li", class_="mod-Kontaktdaten__list-item :: link-blue")
                 EMAIL = EMAIL_D.find("span").text
@@ -46,4 +46,4 @@ if test == 1:
     for par in pars:
         print(par)
 else:
-    input()
+    print('close')
