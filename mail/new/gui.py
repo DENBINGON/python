@@ -112,7 +112,7 @@ class Ui_SmallMailer(object):
         self.label.setText(_translate("MainWindow", "Small Mailer"))
         self.label_2.setText(_translate("MainWindow", "by DENBINGON"))
         self.label_3.setText(_translate("MainWindow", "Enter email base: "))
-        self.label_4.setText(_translate("MainWindow", "________________________________________________________________________________________________________________________________________________"))
+        self.label_4.setText(_translate("MainWindow", "_"*100))
         self.label_5.setText(_translate("MainWindow", "Mail from post:"))
         self.label_6.setText(_translate("MainWindow", "Progress:"))
         self.label_7.setText(_translate("MainWindow", "Enter text or html to post:"))
