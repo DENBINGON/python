@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'fepgui.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_SmallMailer(object):
@@ -110,11 +118,14 @@ class Ui_SmallMailer(object):
         self.lineEdit_6.setGeometry(QtCore.QRect(480, 600, 311, 20))
         self.lineEdit_6.setObjectName("lineEdit_6")
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(750, 570, 70, 21))
+        self.checkBox.setGeometry(QtCore.QRect(640, 570, 70, 21))
         self.checkBox.setObjectName("checkBox")
         self.label_16 = QtWidgets.QLabel(self.centralwidget)
-        self.label_16.setGeometry(QtCore.QRect(670, 570, 81, 21))
+        self.label_16.setGeometry(QtCore.QRect(560, 570, 81, 21))
         self.label_16.setObjectName("label_16")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(686, 555, 111, 41))
+        self.pushButton_2.setObjectName("pushButton_2")
         SmallMailer.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(SmallMailer)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
@@ -151,7 +162,7 @@ class Ui_SmallMailer(object):
         self.label_7.setText(_translate("SmallMailer", "Enter text or html to post:"))
         self.label_8.setText(_translate("SmallMailer", "Title:"))
         self.label_9.setText(_translate("SmallMailer", "Sigature:"))
-        self.pushButton.setText(_translate("SmallMailer", "Start"))
+        self.pushButton.setText(_translate("SmallMailer", "Начать"))
         self.label_10.setText(_translate("SmallMailer", "Logs:"))
         self.label_11.setText(_translate("SmallMailer", "Auth:"))
         self.label_12.setText(_translate("SmallMailer", "SMTP Server:"))
@@ -160,8 +171,10 @@ class Ui_SmallMailer(object):
         self.label_15.setText(_translate("SmallMailer", "Password:"))
         self.checkBox.setText(_translate("SmallMailer", "Yes"))
         self.label_16.setText(_translate("SmallMailer", "Want SSL/TLS?"))
+        self.pushButton_2.setText(_translate("SmallMailer", "Save SMTP"))
         self.menudenbingon.setTitle(_translate("SmallMailer", "denbingon"))
         self.menuGitHub.setTitle(_translate("SmallMailer", "GitHub"))
         self.menuVK.setTitle(_translate("SmallMailer", "VK"))
         self.actionLINK.setText(_translate("SmallMailer", "LINK"))
         self.actionLINK_2.setText(_translate("SmallMailer", "LINK"))
+
