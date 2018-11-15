@@ -5,7 +5,6 @@
 # Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_SmallMailer(object):
@@ -152,7 +151,7 @@ class Ui_SmallMailer(object):
 
     def retranslateUi(self, SmallMailer):
         _translate = QtCore.QCoreApplication.translate
-        SmallMailer.setWindowTitle(_translate("SmallMailer", "MainWindow"))
+        SmallMailer.setWindowTitle(_translate("SmallMailer", "SmallMailer"))
         self.label.setText(_translate("SmallMailer", "Small Mailer"))
         self.label_2.setText(_translate("SmallMailer", "by DENBINGON"))
         self.label_3.setText(_translate("SmallMailer", "Enter email base: "))
@@ -177,4 +176,3 @@ class Ui_SmallMailer(object):
         self.menuVK.setTitle(_translate("SmallMailer", "VK"))
         self.actionLINK.setText(_translate("SmallMailer", "LINK"))
         self.actionLINK_2.setText(_translate("SmallMailer", "LINK"))
-

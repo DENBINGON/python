@@ -63,13 +63,13 @@ class BaseWindow(QtWidgets.QMainWindow):
         signa = self.ui.textEdit_2.toPlainText()
         #Конфигурация текста письма
         text_mail = f"""{text}
-___________________________________________
+{'_' * 40}
 {signa}"""
         #Конфигурация письма перед отправкой
         multi_letter = MIMEMultipart()
-        multi_letter['From'] = Header(mail_post, mail_coding)
-        multi_letter['To'] = Header(base_mail, mail_coding)
-        multi_letter['Subject'] =  Header(title, mail_coding)
+        multi_letter['To'] = base_mail
+        multi_letter['From'] = mail_post
+        multi_letter['Subject'] =  title
         letter = MIMEText(text_mail.encode('cp1251'), 'plain', mail_coding)
         letter.set_charset(mail_coding)
         multi_letter.attach(letter)
@@ -87,7 +87,9 @@ ___________________________________________
         #Отправка сообщений
         for mail in kolv:
             #Отправка
-            postMail.sendmail(mail_post, mail, letter.as_string())
+            del multi_letter['To']
+            multi_letter['To'] = mail
+            postMail.sendmail(mail_post, mail, multi_letter.as_string())
             #Прогресс бар
             progress = int(scro/kolvo*100)
             self.ui.progressBar.setValue(progress)
