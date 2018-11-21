@@ -1,13 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'YIndexerGUI.ui'
-#
-# Created by: PyQt5 UI code generator 5.11.3
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 class Ui_YIndexer(object):
     def setupUi(self, YIndexer):
         YIndexer.setObjectName("YIndexer")
@@ -135,10 +126,8 @@ class Ui_YIndexer(object):
         YIndexer.setMenuBar(self.menubar)
         self.menubar.addAction(self.menuDBG.menuAction())
         self.menubar.addAction(self.menuSYSTEM.menuAction())
-
         self.retranslateUi(YIndexer)
         QtCore.QMetaObject.connectSlotsByName(YIndexer)
-
     def retranslateUi(self, YIndexer):
         _translate = QtCore.QCoreApplication.translate
         YIndexer.setWindowTitle(_translate("YIndexer", "MainWindow"))
@@ -157,4 +146,3 @@ class Ui_YIndexer(object):
         self.label_12.setText(_translate("YIndexer", "Настройки:"))
         self.menuDBG.setTitle(_translate("YIndexer", "DBG"))
         self.menuSYSTEM.setTitle(_translate("YIndexer", "SYSTEM"))
-
