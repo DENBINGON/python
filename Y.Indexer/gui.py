@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'YIndexerGUI.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_YIndexer(object):
@@ -65,8 +73,8 @@ class Ui_YIndexer(object):
         self.label_5.setObjectName("label_5")
         self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_2.setEnabled(True)
-        self.textEdit_2.setGeometry(QtCore.QRect(300, 90, 141, 391))
-        self.textEdit_2.setMinimumSize(QtCore.QSize(141, 391))
+        self.textEdit_2.setGeometry(QtCore.QRect(300, 90, 141, 191))
+        self.textEdit_2.setMinimumSize(QtCore.QSize(0, 0))
         self.textEdit_2.setMaximumSize(QtCore.QSize(141, 391))
         self.textEdit_2.setSizeIncrement(QtCore.QSize(141, 391))
         self.textEdit_2.setBaseSize(QtCore.QSize(141, 391))
@@ -133,6 +141,12 @@ class Ui_YIndexer(object):
         self.checkBox.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.checkBox.setChecked(False)
         self.checkBox.setObjectName("checkBox")
+        self.textEdit_4 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit_4.setGeometry(QtCore.QRect(300, 300, 141, 181))
+        self.textEdit_4.setObjectName("textEdit_4")
+        self.label_10 = QtWidgets.QLabel(self.centralwidget)
+        self.label_10.setGeometry(QtCore.QRect(300, 280, 101, 21))
+        self.label_10.setObjectName("label_10")
         YIndexer.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(YIndexer)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 831, 21))
@@ -165,5 +179,7 @@ class Ui_YIndexer(object):
         self.label_11.setText(_translate("YIndexer", "Имя сохраняемого файла:"))
         self.label_12.setText(_translate("YIndexer", "Настройки:"))
         self.checkBox.setText(_translate("YIndexer", "Использовать User-Agent (Recommend)"))
+        self.label_10.setText(_translate("YIndexer", "Баненые прокси:"))
         self.menuDBG.setTitle(_translate("YIndexer", "DBG"))
         self.menuSYSTEM.setTitle(_translate("YIndexer", "SYSTEM"))
+

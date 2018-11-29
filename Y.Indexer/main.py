@@ -13,8 +13,6 @@ class YINDEXER(QtWidgets.QMainWindow):
         QtWidgets.QWidget.__init__(self, parent)
         self.ui = Ui_YIndexer()
         self.ui.setupUi(self)
-        self.ui.textBrowser.append('ВЫ ИСПОЛЬЗУЕТЕ ДЕМО ВЕРСИЮ ПРОГРАММЫ ')
-        print(self.ui.checkBox.checkState())
         try:
             dataSaveBlackList = open('data/Settings/BlackList.txt', 'r').read().split('\n')
             dataSaveProxy = open('data/Settings/Proxy.txt', 'r').read().split('\n')
@@ -53,6 +51,7 @@ class YINDEXER(QtWidgets.QMainWindow):
         ot.close()
         self.ui.textBrowser.append('Успешно сохраненно ' + datetime.strftime(datetime.now(), "%H:%M:%S"))
     def AddData(self):
+        pl = 0
         self.ui.textBrowser.append('Старт ' + datetime.strftime(datetime.now(), "%H:%M:%S"))
         UsedProxy = []
         UsedRequest = []
@@ -70,7 +69,10 @@ class YINDEXER(QtWidgets.QMainWindow):
         BlackList = (self.ui.textEdit_3.toPlainText()).split('\n')
         OutputFileName = self.ui.lineEdit_2.text()
         TimeProxy = self.ui.horizontalSlider.value()
-        UA = open('data/useragents.txt').read().split("\n")
+        av = open('data/useragents.txt').read().split("\n")
+        for AV in av:
+            pl += 1
+        av.remove(av[pl-1])
         for i in Requests:
             val += 1
         for po in Proxy:
@@ -88,7 +90,7 @@ class YINDEXER(QtWidgets.QMainWindow):
             try:
                 url = 'https://yandex.ru/search/?text=' + request
                 headers = {
-                'User-Agent': choice(UA),
+                'User-Agent': choice(av),
                 'From': 'denbingon@denbingon.com'
                 }
                 if self.ui.checkBox.checkState() == 2:
@@ -114,6 +116,7 @@ class YINDEXER(QtWidgets.QMainWindow):
                         DATA.append(A)
                 except:
                     self.ui.textBrowser.append('Proxy baned ' + datetime.strftime(datetime.now(), "%H:%M:%S"))
+                    self.ui.textEdit_4.append(Proxy[indexP] + '\n')
                 writer.write(f'A{Ai}', request)
                 Ai += 1
                 try:
@@ -169,8 +172,8 @@ class YINDEXER(QtWidgets.QMainWindow):
                     break
                 if indexP == cola:
                     indexP = 0
-                indexP += 1
                 UsedProxy.append(Proxy[indexP])
+                indexP += 1
                 proxyToUrl = 'http://' + Proxy[indexP]
                 continue
             self.ui.progressBar.setValue(aaa)
